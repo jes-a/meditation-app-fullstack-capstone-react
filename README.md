@@ -4,7 +4,8 @@ The insight•full app allows you to track your meditation sessions and add insi
 
 ### Working Prototype
 
-View working prototype here: [insight•full](https://meditation-tracker.herokuapp.com/)  
+View Node working prototype here: [insight•full](https://meditation-tracker.herokuapp.com/) 
+View React working prototype here: [insight•full](https://jes-a.github.io/meditation-app-fullstack-capstone-react/build) 
 
 
 ## Site Map: MVP 
@@ -182,8 +183,15 @@ Features for future iterations include:
 
 ## React command lines
 * npm install ==> install all node modules
-* npm run build ==> build the react files in the "build" folder
+* npm run build ==> build the react files (compile all the react files from the js folder and send them to the build folder and copy all the files from the assets folder without compilation and send to build folder)in the "build" folder 
 * npm start ==> run react server on http://127.0.0.1:8080
 * npm test ==> run the tests
+
+
+## File and Folder Structure for the React Project
+* Assets folder - this folder is having all the files and folders which don't need web pack config for React
+* Build folder - the folder which contains all the files and folders after React compilation is successful
+* JS folder - contain all the React related files and folders
+* Test folder - contain the tests
 
 
