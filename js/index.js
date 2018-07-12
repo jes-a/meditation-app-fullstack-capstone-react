@@ -6,6 +6,7 @@ import {Provider} from 'react-redux';
 // import '../assets/css/main.css';
 
 import Header from '../js/components/header';
+import Footer from '../js/components/footer';
 
 
 
