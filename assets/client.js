@@ -51,42 +51,48 @@ function showStreakDashboard(loggedInUserId) {
 function populateStreakDashboard(sessionDays) {
     let streak = 0;
     let counter = 0;
-    let timeIndex = 0;
-    let sessionDaysStart = [];
+
     let currentTimeStamp = Math.floor(Date.now() / 1000);
+    let dt = new Date();
+    let secs = dt.getSeconds() + (60  * (dt.getMinutes() + (60 * dt.getHours())));
+    let currentDay = currentTimeStamp - secs;
+
     let mostRecentSessionTimeStamp = sessionDays[0];
 
-
-    // Get start of day in unix time for each session in order to remove sessions in same day 
-    $.each(sessionDays, (i, item) => {
-        let dt = new Date();
-        let secs = dt.getSeconds() + (60  * (dt.getMinutes() + (60 * dt.getHours())));
-        sessionDaysStart.push(sessionDays[i] - secs);
-    });
+    let timeFromToday = (currentDay - mostRecentSessionTimeStamp);
 
     // Filter out multiple sessions in one day
-    let uniqueDays = Array.from(new Set(sessionDaysStart));
+    let uniqueDays = Array.from(new Set(sessionDays));
 
     // Find time difference between sessions using 86400 as 1 day
     let sessionTimeDiff = uniqueDays.slice(1).map((n, i) => {return uniqueDays[i] - n; });
 
-        if (uniqueDays.length == 0 || currentTimeStamp - mostRecentSessionTimeStamp > 86400) {
+    // Find the first instance where time difference is greater than a day
+    let timeIndex = sessionTimeDiff.findIndex(timeDiff => timeDiff > 86400) + 1;
+
+        // If the last session was more than 1 day ago, set counter to 0
+        if (timeFromToday > 0) {
             counter = 0; 
-        } else if ((currentTimeStamp - mostRecentSessionTimeStamp) <= 86400) {
-            counter = 1;
-            // Find the first instance where time difference is greater than a day
-            timeIndex = sessionTimeDiff.findIndex(timeDiff => timeDiff > 86400);
+        // Else if the last session was less than 1 day ago and there are multiple sessions in a day, set counter = 1
+        } else if (timeFromToday === 0 && sessionTimeDiff.length === 0) {
+            counter = 1; 
+        // Else if the last session was less than 1 day ago and there are no sessions past 1 day since last session, 
+        // set counter = 1 plus the number of unique sessions
+        } else if (timeFromToday === 0 && timeIndex === 0) {
+            counter = 1 + sessionTimeDiff.length; 
+        // Else if the last session was less than 1 day ago and there are sessions after streak, 
+        //set counter = index of the last session before time diff is more than a day
+        } else if (timeFromToday === 0 && timeIndex > 0) {
+            counter = timeIndex; 
+        // Else if there are no sessions, set counter to 0
         } else {
             counter = 0;
         }
 
-    streak = counter + timeIndex;
-    console.log(streak);
-    console.log(sessionDays);
+    streak = counter;
 
     let htmlContent = `<span>${streak}</span>`
     $('.js-streak-number').html(htmlContent);
-
 };
 
 // DASHBOARD ENTRIES: Last 10 days
@@ -107,12 +113,11 @@ function showLastTenDaysDashboard(loggedInUserId) {
 };
 
 function populateLastTenDashboard(sessionDays) {
-    // Set time to midnight GST
+    // Set current day time to midnight GST
     let currentTimeStamp = Math.floor(Date.now() / 1000);
     let dt = new Date();
     let secs = dt.getSeconds() + (60  * (dt.getMinutes() + (60 * dt.getHours())));
     let currentDay = currentTimeStamp - secs;
-
 
     // Add array of Timestamps for the past 10 days
     let lastTenDays = [currentDay];
@@ -123,18 +128,18 @@ function populateLastTenDashboard(sessionDays) {
     // Add id = last ten days to Dashboard
     let htmlContent = "";
 
-        $.each(lastTenDays, (i, item) => {
-            htmlContent += `<div class="stat-empty" id="${item}"></div>`;
-
-        });
-
-        $('.stat-circles').html(htmlContent);
-
-    // Go through sessionDays and if day is within last 10 days, fill circle
-    $.each(sessionDays, (i, item) => {
-        $('#' + item).addClass('stat-filled');
+    $.each(lastTenDays, (i, item) => {
+        htmlContent += `<div class="stat-empty" id="${item}"></div>`;
     });
 
+    $('.stat-circles').html(htmlContent);
+
+    let uniqueDays = Array.from(new Set(sessionDays));
+
+    // Go through uniqueDays and if day is within last 10 days, fill circle
+    $.each(uniqueDays, (i, item) => {
+        $('#' + item).addClass('stat-filled');
+    });
 };
 
 // DASHBOARD ENTRIES: Most used method
