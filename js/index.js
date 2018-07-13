@@ -6,8 +6,8 @@ import {Provider} from 'react-redux';
 // import '../assets/css/main.css';
 
 import Header from '../js/components/header';
+import ChangePw from '../js/components/change-pw';
 import Footer from '../js/components/footer';
-import ChangePw from '../js/components/footer';
 
 
 
@@ -15,3 +15,10 @@ document.addEventListener('DOMContentLoaded', () =>
 	{return ReactDOM.render(<Header />,
 		document.getElementById('reactHeader'));} );
 
+document.addEventListener('DOMContentLoaded', () =>
+	{return ReactDOM.render(<ChangePw />,
+		document.getElementById('reactChangePw'));} );
+
+document.addEventListener('DOMContentLoaded', () =>
+	{return ReactDOM.render(<Footer />,
+		document.getElementById('reactFooter'));} );

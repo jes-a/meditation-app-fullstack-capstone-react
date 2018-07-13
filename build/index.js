@@ -60,7 +60,11 @@
 	
 	var _header2 = _interopRequireDefault(_header);
 	
-	var _footer = __webpack_require__(547);
+	var _changePw = __webpack_require__(547);
+	
+	var _changePw2 = _interopRequireDefault(_changePw);
+	
+	var _footer = __webpack_require__(548);
 	
 	var _footer2 = _interopRequireDefault(_footer);
 	
@@ -72,6 +76,14 @@
 	
 	document.addEventListener('DOMContentLoaded', function () {
 		return _reactDom2.default.render(_react2.default.createElement(_header2.default, null), document.getElementById('reactHeader'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+		return _reactDom2.default.render(_react2.default.createElement(_changePw2.default, null), document.getElementById('reactChangePw'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+		return _reactDom2.default.render(_react2.default.createElement(_footer2.default, null), document.getElementById('reactFooter'));
 	});
 
 /***/ }),
@@ -68053,6 +68065,77 @@
 
 /***/ }),
 /* 547 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = ChangePw;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function ChangePw(props) {
+		return _react2.default.createElement(
+			'main',
+			{ role: 'main', id: 'change-password-screen' },
+			_react2.default.createElement(
+				'div',
+				{ className: 'row col-12' },
+				_react2.default.createElement(
+					'h1',
+					null,
+					'Change Password'
+				),
+				_react2.default.createElement(
+					'form',
+					{ role: 'form', id: 'changePw-form', className: 'landing-form' },
+					_react2.default.createElement('span', { className: 'js-change-pw-status change-pw-status' }),
+					_react2.default.createElement(
+						'label',
+						{ 'for': 'create-new-password' },
+						'Create a New Password'
+					),
+					_react2.default.createElement('input', { type: 'password', id: 'create-new-password', name: 'js-new-userPw', value: '' }),
+					_react2.default.createElement(
+						'label',
+						{ 'for': 'reenter-new-password' },
+						'Re-enter Password'
+					),
+					_react2.default.createElement('input', { type: 'password', id: 'reenter-new-password', name: 'js-confirm-userPw', value: '' }),
+					_react2.default.createElement(
+						'button',
+						{ role: 'button', name: 'save-pw-button', className: 'login-button', id: 'js-changePw-button', type: 'submit' },
+						'Save Password'
+					)
+				)
+			)
+		);
+	}
+
+/***/ }),
+/* 548 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
