@@ -3,6 +3,8 @@
 // Show Log In Screen on Landing Page
 function showLogInScreen() {
     $('#landing-screen').hide();
+    // $('#reactHeader').hide();
+    // $('#reactSignin').hide();
     $('#login-screen').show();
     $('#signup-screen').hide();
     $('#site-nav').hide();
@@ -383,6 +385,8 @@ $(document).ready(function() {
     $('#js-settings-dropdown').hide();
     $('#landing-screen').show();
     $('#login-screen').hide();
+    // $('#reactLogin').hide();
+    // $('#reactSignin').hide();
     $('#signup-screen').hide();
     $('#site-nav').hide();
     $('#dashboard-screen').hide();
@@ -393,7 +397,7 @@ $(document).ready(function() {
 });
 
 // Handle Log In link from Landing screen
-$('#js-landing-link').on('click', function(event) {
+$(document).on('click', '#js-landing-link', function(event) {
     event.preventDefault();
     showLogInScreen();
 });
@@ -403,6 +407,8 @@ $(document).on('click', '.js-signup', function(event) {
     event.preventDefault();
     $('#landing-screen').hide();
     $('#login-screen').hide();
+    // $('#reactHeader').hide();
+    // $('#reactLogin').hide();
     $('#signup-screen').show();
     $('#site-nav').hide();
     $('#dashboard-screen').hide();

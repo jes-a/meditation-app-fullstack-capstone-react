@@ -64,6 +64,12 @@ body {
   margin-right: auto;
 }
 
+.clearfix::after, main::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 
 /* General Styles */
 
@@ -250,7 +256,6 @@ input[type="radio"] {
 /* Landing Screen - mobile */
 .bg {
   background-image: url('../img/rock-stack-sm.jpg');
-  height: 100%;
   background-position: bottom;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -258,6 +263,8 @@ input[type="radio"] {
   -o-background-size: cover;
   background-size: cover;
   opacity: .9;
+  height:100vh;
+  min-height:100vh;
 }
 
 .landing-bg {
@@ -759,6 +766,10 @@ footer a {
   float: right;
 }
 
+/* #reactHeader, #reactLogin, #reactSignin {
+  height: 100%;
+}
+ */
 
 /* Non-mobile  */
 @media only screen and (min-width: 700px) {

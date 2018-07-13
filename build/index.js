@@ -60,15 +60,31 @@
 	
 	var _header2 = _interopRequireDefault(_header);
 	
-	var _navbar = __webpack_require__(547);
+	var _login = __webpack_require__(547);
+	
+	var _login2 = _interopRequireDefault(_login);
+	
+	var _signin = __webpack_require__(548);
+	
+	var _signin2 = _interopRequireDefault(_signin);
+	
+	var _navbar = __webpack_require__(549);
 	
 	var _navbar2 = _interopRequireDefault(_navbar);
 	
-	var _changePw = __webpack_require__(548);
+	var _dashboard = __webpack_require__(550);
+	
+	var _dashboard2 = _interopRequireDefault(_dashboard);
+	
+	var _journal = __webpack_require__(551);
+	
+	var _journal2 = _interopRequireDefault(_journal);
+	
+	var _changePw = __webpack_require__(552);
 	
 	var _changePw2 = _interopRequireDefault(_changePw);
 	
-	var _footer = __webpack_require__(549);
+	var _footer = __webpack_require__(553);
 	
 	var _footer2 = _interopRequireDefault(_footer);
 	
@@ -78,19 +94,28 @@
 	
 	// import '../assets/css/main.css';
 	
-	// import Login from '../js/components/login';
-	
-	
 	document.addEventListener('DOMContentLoaded', function () {
 		return _reactDom2.default.render(_react2.default.createElement(_header2.default, null), document.getElementById('reactHeader'));
 	});
 	
-	// document.addEventListener('DOMContentLoaded', () =>
-	// 	{return ReactDOM.render(<Login />,
-	// 		document.getElementById('reactLogin'));} );
+	document.addEventListener('DOMContentLoaded', function () {
+		return _reactDom2.default.render(_react2.default.createElement(_login2.default, null), document.getElementById('reactLogin'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+		return _reactDom2.default.render(_react2.default.createElement(_signin2.default, null), document.getElementById('reactSignin'));
+	});
 	
 	document.addEventListener('DOMContentLoaded', function () {
 		return _reactDom2.default.render(_react2.default.createElement(_navbar2.default, null), document.getElementById('reactNavbar'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+		return _reactDom2.default.render(_react2.default.createElement(_dashboard2.default, null), document.getElementById('reactDashboard'));
+	});
+	
+	document.addEventListener('DOMContentLoaded', function () {
+		return _reactDom2.default.render(_react2.default.createElement(_journal2.default, null), document.getElementById('reactJournal'));
 	});
 	
 	document.addEventListener('DOMContentLoaded', function () {
@@ -68087,6 +68112,184 @@
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
+	exports.default = Login;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function Login(props) {
+		return _react2.default.createElement(
+			'main',
+			{ role: 'main', id: 'login-screen', className: 'bg' },
+			_react2.default.createElement(
+				'div',
+				{ className: 'landing-width' },
+				_react2.default.createElement(
+					'div',
+					{ className: 'landing-bg' },
+					_react2.default.createElement(
+						'h2',
+						null,
+						'insight\u2022full'
+					),
+					_react2.default.createElement(
+						'form',
+						{ role: 'form', id: 'login-form', className: 'landing-form' },
+						_react2.default.createElement(
+							'h3',
+							null,
+							'Log In'
+						),
+						_react2.default.createElement('span', { className: 'login-error' }),
+						_react2.default.createElement(
+							'label',
+							{ htmlFor: 'email' },
+							'Email'
+						),
+						_react2.default.createElement('input', { type: 'email', id: 'email', name: 'js-userName' }),
+						_react2.default.createElement(
+							'label',
+							{ htmlFor: 'password' },
+							'Password'
+						),
+						_react2.default.createElement('input', { type: 'password', id: 'password', name: 'js-userPw', className: 'pw' }),
+						_react2.default.createElement(
+							'button',
+							{ role: 'button', name: 'login', className: 'login-button', id: 'js-login-button', type: 'submit' },
+							'Log In',
+							_react2.default.createElement('i', { className: 'far fa-chevron-circle-right button-icon' })
+						)
+					),
+					_react2.default.createElement(
+						'a',
+						{ href: '#', className: 'account-link js-signup' },
+						'If you don\'t have an account, Sign Up...'
+					)
+				)
+			)
+		);
+	}
+
+/***/ }),
+/* 548 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = Signin;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function Signin(props) {
+		return _react2.default.createElement(
+			'main',
+			{ role: 'main', id: 'signup-screen', className: 'bg' },
+			_react2.default.createElement(
+				'div',
+				{ className: 'landing-width' },
+				_react2.default.createElement(
+					'div',
+					{ className: 'landing-bg' },
+					_react2.default.createElement(
+						'h2',
+						null,
+						'insight\u2022full'
+					),
+					_react2.default.createElement(
+						'form',
+						{ role: 'form', id: 'signup-form', className: 'landing-form' },
+						_react2.default.createElement(
+							'h3',
+							null,
+							'Sign Up For an Account'
+						),
+						_react2.default.createElement('span', { className: 'login-error' }),
+						_react2.default.createElement(
+							'label',
+							{ htmlFor: 'userEmail' },
+							'Enter Email Address'
+						),
+						_react2.default.createElement('input', { type: 'email', id: 'user-signup', name: 'js-user-signup' }),
+						_react2.default.createElement(
+							'label',
+							{ htmlFor: 'create-pw' },
+							'Create a Password'
+						),
+						_react2.default.createElement('input', { type: 'password', id: 'create-pw', name: 'js-create-pw' }),
+						_react2.default.createElement(
+							'label',
+							{ htmlFor: 'reenter-pw' },
+							'Re-enter Password'
+						),
+						_react2.default.createElement('input', { type: 'password', id: 'reenter-password', name: 'js-reenter-pw' }),
+						_react2.default.createElement(
+							'button',
+							{ role: 'button', name: 'signup', className: 'login-button', id: 'js-signup-button', type: 'submit' },
+							'Sign Up',
+							_react2.default.createElement('i', { className: 'far fa-chevron-circle-right button-icon' })
+						)
+					),
+					_react2.default.createElement(
+						'a',
+						{ href: '#', className: 'account-link js-login' },
+						'If you have an account, Log In...'
+					)
+				)
+			)
+		);
+	}
+
+/***/ }),
+/* 549 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
 	exports.default = Navbar;
 	
 	__webpack_require__(58);
@@ -68187,7 +68390,234 @@
 	}
 
 /***/ }),
-/* 548 */
+/* 550 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = Dashboard;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function Dashboard(props) {
+		return _react2.default.createElement(
+			'main',
+			{ role: 'main', id: 'dashboard-screen', className: 'dashboard-main' },
+			_react2.default.createElement(
+				'section',
+				{ className: 'dashboard' },
+				_react2.default.createElement(
+					'div',
+					{ className: 'stat-row' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'col col-6' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'stat-box stat-top' },
+							_react2.default.createElement('i', { className: 'fas fa-spa fa-2x' }),
+							_react2.default.createElement(
+								'h4',
+								null,
+								'Total number of meditation sessions'
+							),
+							_react2.default.createElement('div', { className: 'stat-big js-total-number' })
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'col col-6' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'stat-box stat-top' },
+							_react2.default.createElement('i', { className: 'fas fa-fire fa-2x' }),
+							_react2.default.createElement(
+								'h4',
+								null,
+								'Days in a row w/ one or more sessions'
+							),
+							_react2.default.createElement(
+								'div',
+								{ className: 'stat-big js-streak-number' },
+								'X'
+							)
+						)
+					)
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'stat-row' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'col col-12' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'stat-box' },
+							_react2.default.createElement('i', { className: 'fas fa-calendar fa-lg' }),
+							_react2.default.createElement(
+								'h4',
+								null,
+								'Last Ten Days'
+							),
+							_react2.default.createElement('div', { className: 'stat-circles' })
+						)
+					)
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'stat-row' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'col col-7' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'stat-box stat-bottom' },
+							_react2.default.createElement('i', { className: 'fas fa-mobile fa-lg' }),
+							_react2.default.createElement(
+								'h4',
+								null,
+								'Most Used Method'
+							),
+							_react2.default.createElement('div', { className: 'js-method' })
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'col col-5' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'stat-box stat-bottom' },
+							_react2.default.createElement('i', { className: 'fas fa-clock fa-lg' }),
+							_react2.default.createElement(
+								'h4',
+								null,
+								'Avg Time (min)'
+							),
+							_react2.default.createElement('div', { className: 'js-avg-time' })
+						)
+					)
+				)
+			),
+			_react2.default.createElement(
+				'section',
+				{ className: 'sb' },
+				_react2.default.createElement(
+					'div',
+					{ className: 'col sb-col col-12' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'stat-box sb-tall' },
+						_react2.default.createElement('i', { className: 'far fa-lightbulb fa-2x' }),
+						_react2.default.createElement(
+							'h4',
+							null,
+							'Latest Insights'
+						),
+						_react2.default.createElement('div', { className: 'js-latest-entries' }),
+						_react2.default.createElement(
+							'div',
+							{ className: 'js-journal-link journal-link' },
+							_react2.default.createElement(
+								'a',
+								{ href: '#' },
+								'See All ',
+								_react2.default.createElement('i', { className: 'far fa-chevron-circle-right' })
+							)
+						)
+					)
+				)
+			)
+		);
+	}
+
+/***/ }),
+/* 551 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = Journal;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function Journal(props) {
+		return _react2.default.createElement(
+			'main',
+			{ role: 'main', id: 'journal-screen' },
+			_react2.default.createElement(
+				'section',
+				{ className: 'row' },
+				_react2.default.createElement(
+					'div',
+					{ className: 'page-title journal-bkgnd' },
+					_react2.default.createElement(
+						'h1',
+						null,
+						'Insights'
+					)
+				),
+				_react2.default.createElement('div', { className: 'col col-6 journal-entries' }),
+				_react2.default.createElement(
+					'div',
+					{ className: 'col col-6 large-image' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'img-div-journal' },
+						_react2.default.createElement('img', { src: 'assets/img/journal-column.jpg' })
+					)
+				)
+			)
+		);
+	}
+
+/***/ }),
+/* 552 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -68240,13 +68670,13 @@
 						{ htmlFor: 'create-new-password' },
 						'Create a New Password'
 					),
-					_react2.default.createElement('input', { type: 'password', id: 'create-new-password', name: 'js-new-userPw', value: '' }),
+					_react2.default.createElement('input', { type: 'password', id: 'create-new-password', name: 'js-new-userPw' }),
 					_react2.default.createElement(
 						'label',
 						{ htmlFor: 'reenter-new-password' },
 						'Re-enter Password'
 					),
-					_react2.default.createElement('input', { type: 'password', id: 'reenter-new-password', name: 'js-confirm-userPw', value: '' }),
+					_react2.default.createElement('input', { type: 'password', id: 'reenter-new-password', name: 'js-confirm-userPw' }),
 					_react2.default.createElement(
 						'button',
 						{ role: 'button', name: 'save-pw-button', className: 'login-button', id: 'js-changePw-button', type: 'submit' },
@@ -68258,7 +68688,7 @@
 	}
 
 /***/ }),
-/* 549 */
+/* 553 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';

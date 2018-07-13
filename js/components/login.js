@@ -23,10 +23,12 @@ export default function Login(props) {
 	          </h3>
 	          <span className="login-error"></span>
 	          <label htmlFor="email">Email</label>
-	          <input type="email" id="email" name="js-userName" value="" />
+	          <input type="email" id="email" name="js-userName" />
 	          <label htmlFor="password">Password</label>
-	          <input type="password" id="password" name="js-userPw" className="pw" value="" />
-	          <button role="button" name="login" className="login-button" id="js-login-button" type="submit">Log In<i className="far fa-chevron-circle-right button-icon"></i></button>
+	          <input type="password" id="password" name="js-userPw" className="pw" />
+	          <button role="button" name="login" className="login-button" id="js-login-button" type="submit">Log In
+	          	<i className="far fa-chevron-circle-right button-icon"></i>
+	          </button>
 	        </form>
 	          <a href="#" className="account-link js-signup">
 	              If you don't have an account, Sign Up...

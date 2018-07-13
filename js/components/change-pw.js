@@ -21,11 +21,11 @@ export default function ChangePw(props) {
 	        <label htmlFor="create-new-password">
 	          Create a New Password
 	        </label>
-	        <input type="password" id="create-new-password" name="js-new-userPw" value="" />
+	        <input type="password" id="create-new-password" name="js-new-userPw" />
 	        <label htmlFor="reenter-new-password">
 	          Re-enter Password
 	        </label>
-	        <input type="password" id="reenter-new-password" name="js-confirm-userPw" value="" />
+	        <input type="password" id="reenter-new-password" name="js-confirm-userPw" />
 	        <button role="button" name="save-pw-button" className="login-button" id="js-changePw-button" type="submit">
 	          Save Password
 	        </button>
