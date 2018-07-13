@@ -26,7 +26,7 @@ export default function Header(props) {
 	        <h5>    
 	          Stay mindful, and stay insight•full!
 	        </h5>
-	        <button role="link" id="js-landing-link" className="landing-link">
+	        <button role="button" id="js-landing-link" className="landing-link">
 	          Log In<i className="far fa-sign-in-alt button-icon"></i>
 	        </button>
 	        <a href="#" className="account-link js-signup">

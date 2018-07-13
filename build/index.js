@@ -60,11 +60,15 @@
 	
 	var _header2 = _interopRequireDefault(_header);
 	
-	var _changePw = __webpack_require__(547);
+	var _navbar = __webpack_require__(547);
+	
+	var _navbar2 = _interopRequireDefault(_navbar);
+	
+	var _changePw = __webpack_require__(548);
 	
 	var _changePw2 = _interopRequireDefault(_changePw);
 	
-	var _footer = __webpack_require__(548);
+	var _footer = __webpack_require__(549);
 	
 	var _footer2 = _interopRequireDefault(_footer);
 	
@@ -74,8 +78,19 @@
 	
 	// import '../assets/css/main.css';
 	
+	// import Login from '../js/components/login';
+	
+	
 	document.addEventListener('DOMContentLoaded', function () {
 		return _reactDom2.default.render(_react2.default.createElement(_header2.default, null), document.getElementById('reactHeader'));
+	});
+	
+	// document.addEventListener('DOMContentLoaded', () =>
+	// 	{return ReactDOM.render(<Login />,
+	// 		document.getElementById('reactLogin'));} );
+	
+	document.addEventListener('DOMContentLoaded', function () {
+		return _reactDom2.default.render(_react2.default.createElement(_navbar2.default, null), document.getElementById('reactNavbar'));
 	});
 	
 	document.addEventListener('DOMContentLoaded', function () {
@@ -22829,7 +22844,7 @@
 					),
 					_react2.default.createElement(
 						'button',
-						{ role: 'link', id: 'js-landing-link', className: 'landing-link' },
+						{ role: 'button', id: 'js-landing-link', className: 'landing-link' },
 						'Log In',
 						_react2.default.createElement('i', { className: 'far fa-sign-in-alt button-icon' })
 					),
@@ -68072,6 +68087,114 @@
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
+	exports.default = Navbar;
+	
+	__webpack_require__(58);
+	
+	__webpack_require__(126);
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _reactDom = __webpack_require__(12);
+	
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+	
+	var _enzyme = __webpack_require__(128);
+	
+	var _enzymeAdapterReact = __webpack_require__(525);
+	
+	var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
+	
+	function Navbar(props) {
+		return _react2.default.createElement(
+			'nav',
+			{ role: 'navigation', id: 'site-nav', className: 'nav-bg' },
+			_react2.default.createElement(
+				'ul',
+				{ className: 'nav-links' },
+				_react2.default.createElement(
+					'li',
+					{ className: 'nav-title js-nav-title', 'aria-label': 'Home' },
+					'insight\u2022full'
+				),
+				_react2.default.createElement(
+					'li',
+					{ className: 'add-session js-add-session nav-right' },
+					_react2.default.createElement('i', { className: 'far fa-plus-circle', 'aria-label': 'Add Session' }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'nav-text' },
+						'Add Session'
+					)
+				),
+				_react2.default.createElement(
+					'li',
+					{ className: 'journal js-journal nav-right' },
+					_react2.default.createElement('i', { className: 'far fa-lightbulb', 'aria-label': 'Insights' }),
+					_react2.default.createElement(
+						'div',
+						{ className: 'nav-text' },
+						'Insights'
+					)
+				),
+				_react2.default.createElement(
+					'li',
+					{ className: 'settings js-settings nav-right nav-last' },
+					_react2.default.createElement('i', { className: 'far fa-user-circle', 'aria-label': 'Settings' })
+				),
+				_react2.default.createElement(
+					'li',
+					{ className: 'js-settings-dropdown settings-dropdown' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'js-settings-close settings-close' },
+						_react2.default.createElement('i', { className: 'fas fa-times fa-2x' })
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'settings-bg' },
+						_react2.default.createElement(
+							'h3',
+							null,
+							'Settings'
+						),
+						_react2.default.createElement(
+							'ul',
+							null,
+							_react2.default.createElement(
+								'li',
+								{ className: 'js-change-pw' },
+								'Change Password'
+							),
+							_react2.default.createElement(
+								'li',
+								{ className: 'js-logout-link logout-link' },
+								_react2.default.createElement('i', { className: 'fas fa-sign-out-alt' }),
+								'Log Out',
+								_react2.default.createElement('input', { type: 'hidden', className: 'logged-in-user', value: '' })
+							)
+						)
+					)
+				)
+			)
+		);
+	}
+
+/***/ }),
+/* 548 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
 	exports.default = ChangePw;
 	
 	__webpack_require__(58);
@@ -68114,13 +68237,13 @@
 					_react2.default.createElement('span', { className: 'js-change-pw-status change-pw-status' }),
 					_react2.default.createElement(
 						'label',
-						{ 'for': 'create-new-password' },
+						{ htmlFor: 'create-new-password' },
 						'Create a New Password'
 					),
 					_react2.default.createElement('input', { type: 'password', id: 'create-new-password', name: 'js-new-userPw', value: '' }),
 					_react2.default.createElement(
 						'label',
-						{ 'for': 'reenter-new-password' },
+						{ htmlFor: 'reenter-new-password' },
 						'Re-enter Password'
 					),
 					_react2.default.createElement('input', { type: 'password', id: 'reenter-new-password', name: 'js-confirm-userPw', value: '' }),
@@ -68135,7 +68258,7 @@
 	}
 
 /***/ }),
-/* 548 */
+/* 549 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';

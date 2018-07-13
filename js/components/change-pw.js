@@ -18,11 +18,11 @@ export default function ChangePw(props) {
 	      </h1>
 	      <form role="form" id="changePw-form" className="landing-form">
 	        <span className="js-change-pw-status change-pw-status"></span>
-	        <label for="create-new-password">
+	        <label htmlFor="create-new-password">
 	          Create a New Password
 	        </label>
 	        <input type="password" id="create-new-password" name="js-new-userPw" value="" />
-	        <label for="reenter-new-password">
+	        <label htmlFor="reenter-new-password">
 	          Re-enter Password
 	        </label>
 	        <input type="password" id="reenter-new-password" name="js-confirm-userPw" value="" />

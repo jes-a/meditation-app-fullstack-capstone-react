@@ -6,6 +6,8 @@ import {Provider} from 'react-redux';
 // import '../assets/css/main.css';
 
 import Header from '../js/components/header';
+// import Login from '../js/components/login';
+import Navbar from '../js/components/navbar';
 import ChangePw from '../js/components/change-pw';
 import Footer from '../js/components/footer';
 
@@ -14,6 +16,14 @@ import Footer from '../js/components/footer';
 document.addEventListener('DOMContentLoaded', () =>
 	{return ReactDOM.render(<Header />,
 		document.getElementById('reactHeader'));} );
+
+// document.addEventListener('DOMContentLoaded', () =>
+// 	{return ReactDOM.render(<Login />,
+// 		document.getElementById('reactLogin'));} );
+
+document.addEventListener('DOMContentLoaded', () =>
+	{return ReactDOM.render(<Navbar />,
+		document.getElementById('reactNavbar'));} );
 
 document.addEventListener('DOMContentLoaded', () =>
 	{return ReactDOM.render(<ChangePw />,
