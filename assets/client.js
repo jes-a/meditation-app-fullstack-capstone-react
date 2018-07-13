@@ -90,6 +90,7 @@ function populateStreakDashboard(sessionDays) {
         }
 
     streak = counter;
+    console.log(streak);
 
     let htmlContent = `<span>${streak}</span>`
     $('.js-streak-number').html(htmlContent);
@@ -676,6 +677,8 @@ $(document).on('submit', '#changePw-form', function(event) {
     const pw2 = $('input[name="js-confirm-userPw"]').val();
         if (pw !== pw2) {
             alert('Passwords do not match, please re-enter password');
+        } else if (pw == "") {
+            alert('Please enter a password');
         } else {
             const updateUserObject = {
                 pw 

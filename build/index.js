@@ -68090,29 +68090,29 @@
 			{ role: 'footer', id: 'footer-section' },
 			_react2.default.createElement(
 				'div',
-				{ 'class': 'footer-div' },
+				{ className: 'footer-div' },
 				_react2.default.createElement(
 					'p',
-					{ 'class': 'copyright' },
+					{ className: 'copyright' },
 					'\xA9 2018 Jes Albro'
 				),
 				_react2.default.createElement(
 					'div',
-					{ 'class': 'social-links' },
+					{ className: 'social-links' },
 					_react2.default.createElement(
 						'a',
 						{ href: 'https://www.linkedin.com/in/jesalbro/', target: '_blank' },
-						_react2.default.createElement('i', { 'class': 'fab fa-linkedin-in' })
+						_react2.default.createElement('i', { className: 'fab fa-linkedin-in' })
 					),
 					_react2.default.createElement(
 						'a',
 						{ href: 'https://github.com/jes-a', target: '_blank' },
-						_react2.default.createElement('i', { 'class': 'fab fa-github' })
+						_react2.default.createElement('i', { className: 'fab fa-github' })
 					),
 					_react2.default.createElement(
 						'a',
 						{ href: 'mailto:jesalbro@gmail.com?subject=Email from insight\u2022full site' },
-						_react2.default.createElement('i', { 'class': 'far fa-at' })
+						_react2.default.createElement('i', { className: 'far fa-at' })
 					)
 				)
 			)

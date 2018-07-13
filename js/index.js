@@ -7,6 +7,7 @@ import {Provider} from 'react-redux';
 
 import Header from '../js/components/header';
 import Footer from '../js/components/footer';
+import ChangePw from '../js/components/footer';
 
 
 
