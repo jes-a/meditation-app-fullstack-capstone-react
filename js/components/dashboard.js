@@ -18,6 +18,7 @@ export default function Dashboard(props) {
 	              <div className="stat-box stat-top">
 	                <i className="fas fa-spa fa-2x"></i>
 	                <h4>Total number of meditation sessions</h4>
+                    <span class="js-add-success change-status"></span>
 	                <div className="stat-big js-total-number">
 	                </div>
 	              </div>

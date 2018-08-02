@@ -68110,7 +68110,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
 	exports.default = Login;
 	
@@ -68137,56 +68137,66 @@
 	(0, _enzyme.configure)({ adapter: new _enzymeAdapterReact2.default() });
 	
 	function Login(props) {
-		return _react2.default.createElement(
-			'main',
-			{ role: 'main', id: 'login-screen', className: 'bg' },
-			_react2.default.createElement(
-				'div',
-				{ className: 'landing-width' },
-				_react2.default.createElement(
-					'div',
-					{ className: 'landing-bg' },
-					_react2.default.createElement(
-						'h2',
-						null,
-						'insight\u2022full'
-					),
-					_react2.default.createElement(
-						'form',
-						{ role: 'form', id: 'login-form', className: 'landing-form' },
-						_react2.default.createElement(
-							'h3',
-							null,
-							'Log In'
-						),
-						_react2.default.createElement('span', { className: 'login-error' }),
-						_react2.default.createElement(
-							'label',
-							{ htmlFor: 'email' },
-							'Email'
-						),
-						_react2.default.createElement('input', { type: 'email', id: 'email', name: 'js-userName' }),
-						_react2.default.createElement(
-							'label',
-							{ htmlFor: 'password' },
-							'Password'
-						),
-						_react2.default.createElement('input', { type: 'password', id: 'password', name: 'js-userPw', className: 'pw' }),
-						_react2.default.createElement(
-							'button',
-							{ role: 'button', name: 'login', className: 'login-button', id: 'js-login-button', type: 'submit' },
-							'Log In',
-							_react2.default.createElement('i', { className: 'far fa-chevron-circle-right button-icon' })
-						)
-					),
-					_react2.default.createElement(
-						'a',
-						{ href: '#', className: 'account-link js-signup' },
-						'If you don\'t have an account, Sign Up...'
-					)
-				)
-			)
-		);
+	  return _react2.default.createElement(
+	    'main',
+	    { role: 'main', id: 'login-screen', className: 'bg' },
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'landing-width' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'landing-bg' },
+	        _react2.default.createElement(
+	          'h2',
+	          null,
+	          'insight\u2022full'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { 'class': 'demo' },
+	          'To view a demo: ',
+	          _react2.default.createElement('br', null),
+	          ' email: demo@email.com ',
+	          _react2.default.createElement('br', null),
+	          ' password: demo123'
+	        ),
+	        _react2.default.createElement('span', { 'class': 'js-signin-success change-status' }),
+	        _react2.default.createElement(
+	          'form',
+	          { role: 'form', id: 'login-form', className: 'landing-form' },
+	          _react2.default.createElement(
+	            'h3',
+	            null,
+	            'Log In'
+	          ),
+	          _react2.default.createElement('span', { className: 'login-error' }),
+	          _react2.default.createElement(
+	            'label',
+	            { htmlFor: 'email' },
+	            'Email'
+	          ),
+	          _react2.default.createElement('input', { type: 'email', id: 'email', name: 'js-userName' }),
+	          _react2.default.createElement(
+	            'label',
+	            { htmlFor: 'password' },
+	            'Password'
+	          ),
+	          _react2.default.createElement('input', { type: 'password', id: 'password', name: 'js-userPw', className: 'pw' }),
+	          _react2.default.createElement(
+	            'button',
+	            { role: 'button', name: 'login', className: 'login-button', id: 'js-login-button', type: 'submit' },
+	            'Log In',
+	            _react2.default.createElement('i', { className: 'far fa-chevron-circle-right button-icon' })
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'a',
+	          { href: '#', className: 'account-link js-signup' },
+	          'If you don\'t have an account, Sign Up...'
+	        )
+	      )
+	    )
+	  );
 	}
 
 /***/ }),
@@ -68444,6 +68454,7 @@
 								null,
 								'Total number of meditation sessions'
 							),
+							_react2.default.createElement('span', { 'class': 'js-add-success change-status' }),
 							_react2.default.createElement('div', { className: 'stat-big js-total-number' })
 						)
 					),
@@ -68593,6 +68604,7 @@
 			_react2.default.createElement(
 				'section',
 				{ className: 'row' },
+				_react2.default.createElement('span', { 'class': 'js-delete-success change-status' }),
 				_react2.default.createElement(
 					'div',
 					{ className: 'page-title journal-bkgnd' },

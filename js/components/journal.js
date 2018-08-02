@@ -13,6 +13,7 @@ export default function Journal(props) {
 	return (
 	  <main role="main" id="journal-screen">
 	      <section className="row">
+          	<span class="js-delete-success change-status"></span>
 	        <div className="page-title journal-bkgnd">
 	          <h1>Insights</h1>
 	        </div>

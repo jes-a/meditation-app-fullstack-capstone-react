@@ -3,8 +3,6 @@
 // Show Log In Screen on Landing Page
 function showLogInScreen() {
     $('#landing-screen').hide();
-    // $('#reactHeader').hide();
-    // $('#reactSignin').hide();
     $('#login-screen').show();
     $('#signup-screen').hide();
     $('#site-nav').hide();
@@ -247,7 +245,6 @@ function showJournalDashboard(loggedInUserId) {
 		url: 'https://meditation-tracker.herokuapp.com/sessions-journal-sb/' + loggedInUserId,
 	})
 	.done(function (res) {
-		// console.log(res);
 		populateJournalDashboard(res);
 	})
 	.fail(function (jqXHR, error, errorThrown) {
@@ -260,7 +257,6 @@ function showJournalDashboard(loggedInUserId) {
 // Populate Entries in Journal Page
 function populateJournalDashboard(res) {
 	let htmlContent = "";
-	// console.log(res);
     if (res.length === 0) {
         htmlContent += '<p>You currently have no Journal Entries</p>';
         $('.js-journal-link').hide();
@@ -385,8 +381,6 @@ $(document).ready(function() {
     $('#js-settings-dropdown').hide();
     $('#landing-screen').show();
     $('#login-screen').hide();
-    // $('#reactLogin').hide();
-    // $('#reactSignin').hide();
     $('#signup-screen').hide();
     $('#site-nav').hide();
     $('#dashboard-screen').hide();
@@ -407,8 +401,6 @@ $(document).on('click', '.js-signup', function(event) {
     event.preventDefault();
     $('#landing-screen').hide();
     $('#login-screen').hide();
-    // $('#reactHeader').hide();
-    // $('#reactLogin').hide();
     $('#signup-screen').show();
     $('#site-nav').hide();
     $('#dashboard-screen').hide();
@@ -478,7 +470,8 @@ $(document).on('click', '#js-signup-button', function(event) {
 				contentType: 'application/json'
 			})
 			.done(function (result) {
-				alert('Thanks for signing up! Please sign in.');
+                $('.js-signin-success').html('Thanks for signing up! Please sign in.');
+                $('.js-signin-success').addClass('change-status-success');
 				showLogInScreen();
 			})
 			.fail(function (jqXHR, error, errorThrown) {
@@ -605,9 +598,11 @@ $(document).on('click', '#js-save-session', function(event) {
 			contentType: 'application/json'
 		})
 		.done(function(res) {
-			alert('You successfully added a session');
-			$('#add-session-form')[0].reset();
-			showDashboardScreen();
+            $('#add-session-form')[0].reset();
+            showDashboardScreen();
+            $('.js-add-success').html('<i class="fal fa-thumbs-up"></i> You successfully added a session');
+            $('.js-add-success').addClass('change-status-success');
+            $('.js-add-success').delay(2000).fadeOut();
 		})
 	    .fail(function(jqXHR, error, errorThrown) {
 	        console.log(jqXHR);
@@ -642,7 +637,9 @@ function deleteSession(sessionId) {
             url: 'https://meditation-tracker.herokuapp.com/sessions/' + sessionId,
         })
         .done(function(res) {
-            alert('You successfully deleted a session');
+            $('.js-delete-success').html('<i class="fas fa-check-circle"></i> You successfully deleted a session');
+            $('.js-delete-success').addClass('change-status-success');
+            $('.js-delete-success').delay(2000).fadeOut();
             showJournalScreen(loggedInUserId)
         })
         .fail(function(jqXHR, error, errorThrown) {

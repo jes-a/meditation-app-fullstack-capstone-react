@@ -326,7 +326,12 @@ input[type="radio"] {
 }
 
 .landing-form h3 {
-  margin-top: 40px;
+    margin-top: 10px;
+}
+
+.demo {
+    color: #373E40;
+    padding-top: 15px
 }
 
 .pw {
@@ -766,10 +771,24 @@ footer a {
   float: right;
 }
 
-/* #reactHeader, #reactLogin, #reactSignin {
-  height: 100%;
+/* Alert Statuses */
+
+.change-status {
+    font-family: 'aglet-slab', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: #ffffff;
 }
- */
+
+.change-status-success {
+    display: inline-block;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #4b6181;
+}
+
 
 /* Non-mobile  */
 @media only screen and (min-width: 700px) {
@@ -815,10 +834,6 @@ footer a {
 /* Login & Sign Up Sections */
   .landing-form input {
     width: 362px;
-  }
-
-  .landing-form h3 {
-    margin-top: 40px;
   }
 
 /* Nav Header */
